@@ -1,0 +1,157 @@
+/* Main drawer container styling */
+#translationDrawer {
+  position: fixed !important;
+  top: 0 !important;
+  right: -300px !important; /* Start off-screen */
+  width: 300px !important;
+  height: 100% !important;
+  background-color: white !important;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3) !important;
+  z-index: 2147483647 !important; /* Highest z-index */
+  transition: right 0.3s ease !important;
+  padding: 20px !important;
+  box-sizing: border-box !important;
+  overflow-y: auto !important;
+  font-family: Arial, sans-serif !important;
+}
+
+#translationDrawer.open {
+  right: 0 !important;
+}
+
+/* Form elements styling */
+#translationDrawer select,
+#translationDrawer input,
+#translationDrawer textarea,
+#translationDrawer button {
+  width: 100% !important;
+  margin-bottom: 15px !important;
+  padding: 8px !important;
+  box-sizing: border-box !important;
+  border: 1px solid #ccc !important;
+  border-radius: 4px !important;
+}
+
+#translationDrawer select {
+  color: black !important;
+  background-color: white !important;
+  font-size: 14px !important;
+  font-family: Arial, sans-serif !important;
+  appearance: auto !important;
+  -webkit-appearance: menulist !important;
+  -moz-appearance: menulist !important;
+}
+
+#translationDrawer select option {
+  color: black !important;
+  background-color: white !important;
+  font-size: 14px !important;
+}
+
+/* Buttons styling */
+#translationDrawer button {
+  background-color: #4285f4 !important;
+  color: white !important;
+  border: none !important;
+  cursor: pointer !important;
+  font-weight: bold !important;
+}
+
+#translationDrawer button:hover {
+  background-color: #2b6ed9 !important;
+}
+
+/* Close button */
+#translationDrawerClose {
+  position: absolute !important;
+  top: 10px !important;
+  right: 10px !important;
+  background: none !important;
+  border: none !important;
+  font-size: 20px !important;
+  cursor: pointer !important;
+  color: #333 !important;
+  width: auto !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Labels */
+#translationDrawer label {
+  color: black !important;
+  display: block !important;
+  margin-bottom: 5px !important;
+  font-weight: bold !important;
+}
+
+/* Ensure text visibility for all drawer elements */
+#translationDrawer * {
+  color: black !important;
+}
+
+/* Additional spacing */
+#translationDrawer h3 {
+  margin-top: 0 !important;
+  color: #333 !important;
+}
+
+/* Floating icon styling if present */
+#translationIcon {
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 50% !important;
+  background-color: white !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3) !important;
+  cursor: pointer !important;
+  z-index: 2147483646 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+#translationIcon img {
+  width: 32px !important;
+  height: 32px !important;
+}
+
+/* Copy button styling */
+#translationCopyButton {
+  position: absolute !important;
+  right: 10px !important;
+  background-color: #4285f4 !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 4px !important;
+  padding: 5px 10px !important;
+  cursor: pointer !important;
+  font-size: 12px !important;
+  width: auto !important;
+  margin: 0 !important;
+}
+
+#translationCopyButton:hover {
+  background-color: #2b6ed9 !important;
+}
+
+/* Make room for the copy button next to translation output */
+#translationOutput {
+  position: relative !important;
+  padding-right: 70px !important; /* Make space for the copy button */
+}
+
+/* Success message for copy operation */
+.copy-success-message {
+  color: green !important;
+  font-size: 12px !important;
+  margin-top: 5px !important;
+  text-align: right !important;
+  opacity: 0 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+.copy-success-message.show {
+  opacity: 1 !important;
+}

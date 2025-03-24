@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Translation Tool Extension",
+  "version": "3.0",
+  "description": "A Chrome extension that adds a translation drawer when clicked for easy webpage translation.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content.js", "src/copy-button.js"],
+      "css": ["src/drawer-styles.css"]
+    }
+  ],
+  "options_page": "src/options/options.html",
+  "action": {
+    "default_icon": {
+      "16": "images/icon16x16.png",
+      "48": "images/icon48x48.png",
+      "128": "images/icon128x128.png"
+    }
+  },
+  "icons": {
+    "16": "images/icon16x16.png",
+    "48": "images/icon48x48.png",
+    "128": "images/icon128x128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["images/icon16x16.png", "images/icon48x48.png", "images/icon128x128.png", "src/drawer-styles.css", "src/copy-button.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
